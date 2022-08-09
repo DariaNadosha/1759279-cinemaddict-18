@@ -1,7 +1,7 @@
 # Проект «Киноман»
 
 * Студент: [Дарья Надоша](https://up.htmlacademy.ru/ecmascript/18/user/1759279).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов] (https://htmlacademy.ru/profile/joker).
 
 ---
 
