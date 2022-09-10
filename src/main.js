@@ -9,8 +9,9 @@ const siteNavigationElement = siteMainElement.querySelector('.main-navigation');
 const siteHeaderElement = document.querySelector('.header');
 const siteProfileElement = siteHeaderElement.querySelector('.header__profile');
 
-render(new NewNavigationView (), siteNavigationElement);
+render(new NewNavigationView(), siteNavigationElement);
 render(new NewProfileHeaderView(), siteProfileElement);
 render(new NewSortView(), siteMainElement);
 
-FilmPresenter.init(siteMainElement);
+const filmsPresenter = new FilmPresenter();
+filmsPresenter.init(siteMainElement);
