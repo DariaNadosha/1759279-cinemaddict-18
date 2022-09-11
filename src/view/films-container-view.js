@@ -1,14 +1,15 @@
 import {createElement} from '../render.js';
 
-const createFilmContainerTemplate = () => (
+const createFilmsContainerTemplate = () => (
   `
-  <section class="films"><section>
-`
+    <div class="films-list__container">
+    </div>
+  `
 );
 
-export default class NewFilmContainerView {
+export default class FilmsContainerView {
   getTemplate() {
-    return createFilmContainerTemplate();
+    return createFilmsContainerTemplate();
   }
 
   getElement() {

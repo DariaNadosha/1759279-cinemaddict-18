@@ -1,14 +1,16 @@
 import {createElement} from '../render.js';
 
-const createNewFooterStatisticsTemplate = () => (
+const createFilmsListTemplate = () => (
   `
-    <p>0 movies inside</p>
+    <section class="films-list">
+      <h2 class="films-list__title visually-hidden">All movies. Upcoming</h2>
+    </section>
   `
 );
 
-export default class FooterStatisticsView {
+export default class FilmsListView {
   getTemplate() {
-    return createNewFooterStatisticsTemplate();
+    return createFilmsListTemplate();
   }
 
   getElement() {

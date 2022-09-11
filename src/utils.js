@@ -12,7 +12,7 @@ const getRandomFloat = (min, max, digits) => {
     return ('Функция не может быть выполнена');
   }
   const digitsDegree = 10 ** digits;
-  return Math.floor((Math.random() * (max - min)) + min * digitsDegree)/digitsDegree;
+  return Math.floor((Math.random() * (max - min)) + min * digitsDegree) / digitsDegree;
 };
 getRandomFloat(0,100,3);
 
