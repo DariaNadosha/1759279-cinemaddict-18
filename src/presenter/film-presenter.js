@@ -1,12 +1,11 @@
 import FilmsContainerView from '../view/films-container-view.js';
-import FilmCardView from '../view/film-card-view.js';
-import ShowMoreButtonView from '../view/show-more-button-view.js';
 import FilmsListView from '../view/films-list-view.js';
 import FilmsView from '../view/films-view.js';
+//import FilmDetailsView from '../view/film-details-view.js';
 
 import {render} from '../render.js';
 
-export default class FilmsPresenter {
+export default class FilmPresenter {
   filmsSection = new FilmsView();
   filmsList = new FilmsListView();
   filmComponent = new FilmsContainerView();
@@ -17,17 +16,15 @@ export default class FilmsPresenter {
     this.filmsModel = filmsModel;
     this.commentsModel = commentsModel;
 
-    this.filmsData = [...filmsModel.filmsData];
+    this.films = [...filmsModel.films];
 
     render(this.filmsSection, this.filmContainer);
     render(this.filmsList, this.filmsSection.element);
 
     render(this.filmComponent, this.filmsList.element);
 
-    for (let i = 0; i < 5; i++) {
-      render(new FilmCardView(this.filmsData[i]), this.filmComponent.element);
-    }
+    //const comments = [...this.commentsModel.get(this.films[0])];
 
-    render(new ShowMoreButtonView(), this.filmsList.element);
+    //render(new FilmDetailsView(this.films[0], comments), this.filmContainer.parentElement);
   };
 }
